@@ -523,6 +523,9 @@ ZWayServerAccessory.prototype = {
                     services.push(new Service.Switch(vdev.metrics.title, vdev.id));
                 }
                 break;
+            case "switchBinary.switch":
+              services.push(new Service.Switch(vdev.metrics.title, vdev.id));
+              break;
             case "switchRGBW":
             case "switchMultilevel":
                 var stype = this.platform.getTagValue(vdev, "Service.Type");
